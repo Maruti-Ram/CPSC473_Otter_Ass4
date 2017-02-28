@@ -68,7 +68,7 @@ function addKeyPressHandler() {
         if (event.keyCode === ESC_KEY) {
             hideDetails();
         }
-        if(event.keyCode>48 &&  event.keyCode<58){
+        if(event.keyCode>48 && event.keyCode<58){
             showDetails();
             setDetailsFromThumb(select[event.keyCode-49]);
         }
