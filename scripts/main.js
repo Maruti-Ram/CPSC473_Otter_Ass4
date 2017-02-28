@@ -67,21 +67,10 @@ function addKeyPressHandler() {
         var select = getThumbnailArray();
         if (event.keyCode === ESC_KEY) {
             hideDetails();
-        }else if (event.keyCode === 49) {
+        }
+        if(event.keyCode>48 &&  event.keyCode<58){
             showDetails();
-            setDetailsFromThumb(select[0]);
-        } else if (event.keyCode === 50) {
-            showDetails();
-            setDetailsFromThumb(select[1]);
-        } else if (event.keyCode === 51) {
-            showDetails();
-            setDetailsFromThumb(select[2]);
-        } else if (event.keyCode === 52) {
-            showDetails();
-            setDetailsFromThumb(select[3]);
-        } else if (event.keyCode === 53) {
-            showDetails();
-            setDetailsFromThumb(select[4]);
+            setDetailsFromThumb(select[event.keyCode-49]);
         }
     });
 }
